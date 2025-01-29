@@ -9,7 +9,7 @@
     bumpVersions: [
         {
             fileMatch: "Chart.ya?ml",
-            semverLevel: "{{#if isPatch }}patch{{ else }}minor{{ /if }}",
+            bumpType: "{{#if isPatch }}patch{{ else }}minor{{ /if }}",
             matchStrings: [
                 'version:\\s(?<version>[^\\s]+)'
             ]
