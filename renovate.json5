@@ -8,7 +8,7 @@
 
     bumpVersions: [
         {
-            fileMatch: "Chart.ya?ml",
+            fileMatch: "{{packageFileDir}}\/Chart.ya?ml",
             bumpType: "{{#if isPatch}}patch{{else}}minor{{/if}}",
             matchStrings: [
                 'version:\\s(?<version>[^\\s]+)'
