@@ -3,6 +3,6 @@ name: immich
 description: A Immich Helm chart targeted at advanced users
 
 type: application
-version: 0.2.3
+version: 0.3.0
 # renovate: image=ghcr.io/immich-app/immich-server
 appVersion: "v1.123.0"

@@ -3,6 +3,6 @@ name: renovate
 description: A renovate Helm chart targeted at advanced users
 
 type: application
-version: 0.1.0
+version: 0.2.0
 # renovate: image=ghcr.io/renovatebot/renovate
 appVersion: "v39.158.0"
