@@ -6,13 +6,23 @@
         'helpers:pinGitHubActionDigests',
     ],
 
-    bumpVersions: [
+    argocd: {
+        fileMatch: ["argocd\\.ya?ml$"]
+    }
+
+    packageRules: [
         {
-            fileMatch: "{{packageFileDir}}\/Chart.ya?ml",
-            bumpType: "{{#if isPatch}}patch{{else}}minor{{/if}}",
-            matchStrings: [
-                'version:\\s(?<version>[^\\s]+)'
-            ]
+            matchManagers: ["!argocd"],
+            bumpVersions: [
+                {
+                    fileMatch: "{{packageFileDir}}\/Chart.ya?ml",
+                    bumpType: "{{#if isPatch}}patch{{else}}minor{{/if}}",
+                    matchStrings: [
+                        'version:\\s(?<version>[^\\s]+)'
+                    ]
+                }
+            ],
         }
-    ],
+    ]
+
 }
