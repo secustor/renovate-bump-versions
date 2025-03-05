@@ -12,7 +12,7 @@
 
     packageRules: [
         {
-            matchManagers: ["!argocd"],
+            matchFileNames: ["!/argocd.ya?ml$/"],
             bumpVersions: [
                 {
                     fileMatch: "{{packageFileDir}}\/Chart.ya?ml",
