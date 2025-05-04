@@ -15,7 +15,7 @@
             matchFileNames: ["!/argocd.ya?ml$/"],
             bumpVersions: [
                 {
-                    filePatterns: ["{{packageFileDir}}\/Chart.ya?ml"],
+                    filePatterns: ["{{packageFileDir}}/Chart.yaml"],
                     bumpType: "{{#if isPatch}}patch{{else}}minor{{/if}}",
                     matchStrings: [
                         'version:\\s(?<version>[^\\s]+)'
