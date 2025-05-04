@@ -7,7 +7,7 @@
     ],
 
     argocd: {
-        fileMatch: ["argocd\\.ya?ml$"]
+        managerFilePatterns: ["/argocd\\.ya?ml$/"]
     },
 
     packageRules: [
@@ -15,7 +15,7 @@
             matchFileNames: ["!/argocd.ya?ml$/"],
             bumpVersions: [
                 {
-                    fileMatch: "{{packageFileDir}}\/Chart.ya?ml",
+                    filePatterns: ["{{packageFileDir}}\/Chart.ya?ml"],
                     bumpType: "{{#if isPatch}}patch{{else}}minor{{/if}}",
                     matchStrings: [
                         'version:\\s(?<version>[^\\s]+)'
