@@ -16,7 +16,6 @@
             bumpVersions: [
                 {
                     filePatterns: ["{{packageFileDir}}/Chart.yaml"],
-                    bumpType: "{{#if isPatch}}patch{{else}}minor{{/if}}",
                     matchStrings: [
                         'version:\\s(?<version>[^\\s]+)'
                     ]
